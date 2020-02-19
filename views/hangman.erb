@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1;" />
+    <title>Hangman - The hanging guy game</title>
+    <link rel="stylesheet" href="/hangman/layout.css" />
+    <link rel="stylesheet" href="/hangman/hangman.css" />
+    <link rel="stylesheet" href="/hangman/keyboard.css" />
+  </head>
+  <body>
+    <script type="text/javascript" src="/hangman/hangman.js" defer></script>
+    <script type="text/javascript" src="/hangman/keyboard.js" defer></script>
+    <div class="hangman">
+      <div id="topbar"></div>
+      <div id="mast"></div>
+      <div id="platform"></div>
+      <div class="bone" id="rope-anchor">
+        <div id="rope">
+          <div class="bone" id="noose-od">
+            <div id="noose-id"></div>
+            <div class="body-part" id="head"></div>
+            <div class="body-part" id="body">
+              <div class="bone" id="left-shldr">
+                <div class="body-part" id="left-arm"></div>
+              </div>
+              <div class="bone" id="right-shldr">
+                <div class="body-part" id="right-arm"></div>
+              </div>
+              <div class="bone" id="left-hip">
+                <div class="body-part" id="left-leg"></div>
+              </div>
+              <div class="bone" id="right-hip">
+                <div class="body-part" id="right-leg"></div>
+              </div>
+            </div> <!-- body -->
+          </div> <!-- noose-od -->
+        </div> <!-- rope -->
+      </div> <!-- rope-anchor -->
+    </div> <!-- hangman -->
+    <div class="word-display">
+      <h2 id="status-line">Guess the Word!</h2> 
+      <h3 id="status-subtitle">
+        Or he dies.
+        <% unless session["hint"].nil? %>
+          (<a href="javascript:getHint();">get hint</a>)
+        <% end %>
+      </h3> 
+      <h1 id="word">
+        <% session["keyword"].length.times do %>
+        <span class="letter"></span>
+        <% end %>
+      </h1>
+    </div>
+    <div class="keyboard"></div>
+  </body>
+</html>

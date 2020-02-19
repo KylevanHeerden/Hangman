@@ -1,0 +1,38 @@
+/* Keyboard stylesheet */
+
+.keyboard {
+  grid-area: keyboard;
+  display: flex;
+  flex-flow: column;
+  width: auto;
+  justify-content: center;
+}
+
+.keyboard .row {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  flex: 1 1 auto;
+  height: 3rem;
+  margin: 1px;
+}
+
+.keyboard button {
+  display: block;
+  background: linear-gradient(#558, #333);
+  color: #ddd;
+  flex: 0 1 3rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 1px;
+  border-radius: 15%;
+  border: 0;
+}
+.keyboard button:active {
+  background: linear-gradient(#500, #330);
+}
+.keyboard button:disabled {
+  background: #000;
+  color: #888;
+  display:block;
+}

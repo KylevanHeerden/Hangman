@@ -1,0 +1,1 @@
+This is a hangman game. Got Back-end from example, made front-end: https://www.theodinproject.com/courses/ruby-on-rails/lessons/sinatra-project

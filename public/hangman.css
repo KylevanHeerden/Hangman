@@ -1,0 +1,196 @@
+.hangman {
+  grid-area: gallows;
+  position: relative;
+  display: block;
+  height: 380px;
+  width: 260px;
+  margin: auto;
+}
+.hangman div {
+  position: absolute;
+  display: block;
+  background-color: black;
+}
+.hangman .bone {
+  width: 0px;
+  height: 0px;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;
+}
+.hangman #noose-od div {
+  visibility: hidden;
+}
+
+.hangman #topbar {
+  width: 200px;
+  height: 20px;
+  left: 15px;
+  top: 0px;
+}
+
+.hangman #mast {
+  width: 20px;
+  height: 300px;
+  left: 15px;
+  top: 20px;
+}
+
+.hangman #platform {
+  width: 230px;
+  height: 30px;
+  top: 320px;
+  left: 0px;
+}
+
+.hangman #rope-anchor {
+  top: 20px;
+  left: 127px;
+  animation-duration: 1s;
+}
+.hangman #rope {
+  width: 5px;
+  height: 80px;
+  top: 0px;
+  left: -2px;
+}
+.hangman #rope #noose-od {
+  width: 30px;
+  height: 45px;
+  top: 75px;
+  left: -12px;
+  border-radius: 100%;
+  animation-duration: 0.8s;
+}
+.hangman #rope #noose-od #noose-id {
+  width: 20px;
+  height: 35px;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  background-color: white;
+  visibility: visible;
+}
+
+.hangman #head {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  top: -30px;
+  left: -15px;
+}
+
+.hangman #body {
+  width: 15px;
+  height: 100px;
+  top: 25px;
+  left: 7px;
+}
+
+.hangman #left-shldr {
+  top: 30px;
+  left: 7px;
+  transform: rotate(-15deg);
+  animation-duration: 0.2s;
+}
+.hangman #left-arm {
+  width: 60px;
+  height: 10px;
+  top: 0px;
+  right: 0px;
+  border-radius: 5px 0 0 5px;
+}
+
+.hangman #right-shldr {
+  top: 30px;
+  left: 7px;
+  transform: rotate(15deg);
+  animation-duration: 0.25s;
+}
+.hangman #right-arm {
+  width: 60px;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  border-radius: 0 5px 5px 0;
+}
+
+.hangman #left-hip {
+  top: 100px;
+  left: 4px;
+  transform: rotate(20deg);
+  animation-duration: 1.2s;
+}
+.hangman #left-leg {
+  width: 15px;
+  height: 80px;
+  top: -7px;
+  left: -7px;
+  border-radius: 6px;  
+}
+
+.hangman #right-hip {
+  top: 100px;
+  left: 10px;
+  transform: rotate(-20deg);
+  animation-duration: 1.4s;
+}
+.hangman #right-leg {
+  width: 15px;
+  height: 80px;
+  top: -7px;
+  left: -7px;
+  border-radius: 6px;  
+}
+
+
+
+@keyframes rope-anchor {
+  from {
+    transform: rotate(-12deg);
+  }
+  to {
+    transform: rotate(12deg);
+  }
+}
+@keyframes noose-od {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes left-shldr {
+  from {
+    transform: rotate(-60deg);
+  }
+  to {
+    transform: rotate(75deg);
+  }
+}
+@keyframes right-shldr {
+  from {
+    transform: rotate(60deg);
+  }
+  to {
+    transform: rotate(-75deg);
+  }
+}
+@keyframes left-hip {
+  from {
+    transform: rotate(60deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+@keyframes right-hip {
+  from {
+    transform: rotate(-55deg);
+  }
+  to {
+    transform: rotate(-3deg);
+  }
+}
